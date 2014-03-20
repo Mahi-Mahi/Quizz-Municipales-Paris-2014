@@ -1,10 +1,10 @@
 require.config({
 	paths: {
-		angular: '../../vendor/angular/angular',
-		angularRoute: '../../vendor/angular-route/angular-route',
-		angularResource: '../../vendor/angular-resource/angular-resource',
-		angularMocks: '../../vendor/angular-mocks/angular-mocks',
-		text: '../../vendor/requirejs-text/text'
+		angular: '/app/vendor/angular/angular',
+		angularRoute: '/app/vendor/angular-route/angular-route',
+		angularResource: '/app/vendor/angular-resource/angular-resource',
+		angularMocks: '/app/vendor/angular-mocks/angular-mocks',
+		text: '/app/vendor/requirejs-text/text'
 	},
 	shim: {
 		'angular': {

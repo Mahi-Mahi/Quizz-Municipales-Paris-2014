@@ -5,7 +5,7 @@ define([], function() {
 	return ['$scope', '$rootScope', '$location', '$route', 'dataService', function($scope, $rootScope, $location, $route, dataService) {
 		// You can access the scope of the controller from here
 
-		$scope.mode = $route.current.$$route.originalPath.replace('/', '');
+		$scope.mode = $route.current.$$route.originalPath.replace('/app/', '');
 
 		switch ($scope.mode) {
 
@@ -54,7 +54,7 @@ define([], function() {
 				console.log($scope.question);
 
 			} else {
-				$location.path("/resultats");
+				$location.path("/app/resultats");
 			}
 
 		};

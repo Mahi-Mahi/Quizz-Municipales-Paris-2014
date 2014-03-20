@@ -112,3 +112,18 @@ gulp.task('watch', function() {
         gulp.run('html');
     });
 });
+
+gulp.task('build', ['setup'], function() {
+
+    // base_url
+    var base_url = 'quizz-municipales-paris-2014';
+
+    gulp.src([base_url + '/'], {
+        read: false
+    })
+        .pipe(clean());
+    gulp.src(['app/**'])
+        .pipe(replace("/app/", '/' + base_url + '/'))
+        .pipe(gulp.dest(base_url + '/'));
+
+});

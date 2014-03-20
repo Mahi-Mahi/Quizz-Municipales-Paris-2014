@@ -10,24 +10,24 @@ define(['angular', 'app'], function(angular, app) {
 
 	return app.config(['$routeProvider',
 		function($routeProvider) {
-			$routeProvider.when('/', {
-				templateUrl: 'partials/home.html',
+			$routeProvider.when('/app/', {
+				templateUrl: '/app/partials/home.html',
 				controller: 'homeCtrl'
 			});
-			$routeProvider.when('/quizz', {
-				templateUrl: 'partials/quizz.html',
+			$routeProvider.when('/app/quizz', {
+				templateUrl: '/app/partials/quizz.html',
 				controller: 'quizzCtrl'
 			});
-			$routeProvider.when('/reponses', {
-				templateUrl: 'partials/quizz.html',
+			$routeProvider.when('/app/reponses', {
+				templateUrl: '/app/partials/quizz.html',
 				controller: 'quizzCtrl'
 			});
-			$routeProvider.when('/resultats', {
-				templateUrl: 'partials/results.html',
+			$routeProvider.when('/app/resultats', {
+				templateUrl: '/app/partials/results.html',
 				controller: 'resultsCtrl'
 			});
 			$routeProvider.otherwise({
-				redirectTo: '/'
+				redirectTo: '/app/'
 			});
 		}
 	]);

@@ -10,7 +10,7 @@ define(['angular'], function(angular) {
 
 	angular.module('dataService', ['ngResource'])
 		.factory('dataService', function($resource) {
-			return $resource('/data/data.json', {}, {
+			return $resource('/app/data/data.json', {}, {
 				getData: {
 					method: 'GET',
 					isArray: false
