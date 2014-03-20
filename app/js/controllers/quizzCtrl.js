@@ -63,7 +63,7 @@ define([], function() {
 			startQuizz();
 		} else {
 			dataService.getData(function(data) {
-				$scope.questions = data.questions.slice(0, 1);
+				$scope.questions = data.questions.slice(0, 3);
 				startQuizz();
 			});
 		}

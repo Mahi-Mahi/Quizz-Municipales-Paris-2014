@@ -1,16 +1,63 @@
-<!doctype html>
-<html lang="fr" ng-app>
-	<head>
-		<title>Quizz Municipales 2014 à Paris</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie7 oldie" lang="fr" ng-app> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="fr" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" ng-app> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Le Parisien Magazine - Les municipales - Quizz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="/app/css/style.css" media="all" />
+	<link rel="shortcut icon" href="/app/favicon.ico" />
+	<script type="text/javascript" src="/app/vendor/modernizr/modernizr.js"></script>
+    <!--[if lte IE 8]>
+		<script type="text/javascript" src="/app/vendor/selectivizr/selectivizr.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+	    .gradient {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->
+</head>
+	<body>
 
-		<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
-	</head>
-	<body >
 		<div ng-view>
-			<h1>Quizz Municipales 2014 à Paris</h1>
-<a href="/app/quizz">Jouer</a>
+			
+<div class="wrapper gradient wrapper-home">
+	<div class="wrapper__header">
+		<a href="http://www.leparisienmagazine.fr" target="_blank"><img src="/app/images/logo-lpm-hp.png" alt="Le parisien magazine" /></a>
+	</div><!-- .wrapper__header -->
+	<div class="main" role="main">
+		<div class="sidebar">
+			<div class="sidebar__character">
+				<img src="/app/images/profile-ah.png" alt="" />
+			</div><!-- .sidebar__character -->
+		</div><!-- .left-sidebar -->
+		<div class="content">
+			<p class="content__tagline">
+				<img src="/app/images/main-hp.png" alt="Quiz municipales 2014 à Paris" />
+			</p>
+			<p class="aligncenter bt-item">
+				<a href="/app/quizz">jouer</a>
+			</p>
+		</div><!-- .content -->
+		<div class="sidebar">
+			<div class="sidebar__character">
+				<img src="/app/images/profile-nkm.png" alt="" />
+			</div><!-- .sidebar__character -->
+		</div><!-- .right-sidebar -->
+	</div><!-- .main -->
+
+	<footer class="footer">
+		&nbsp;
+	</footer><!-- .footer -->
+</div><!-- .wrapper -->
+
+
 		</div>
 		<script data-main="/app/js/main" src="/app/vendor/requirejs/require.js"></script>
+
 	</body>
 </html>

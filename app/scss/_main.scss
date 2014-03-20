@@ -1,0 +1,20 @@
+
+
+
+.hidalgo-bullet, .nkm-bullet {
+	display: none;
+}
+.reponses {
+	.ah .hidalgo-bullet, .nkm .nkm-bullet {
+		display: inline-block;
+	}
+	.nkm .default-bullet, .ah .default-bullet {
+		display: none;
+	}
+}
+.bt-right, .bt-left {
+	display: none;
+}
+.reponses .bt-right {
+	display: block;
+}

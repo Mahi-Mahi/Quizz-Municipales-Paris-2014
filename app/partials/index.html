@@ -1,15 +1,32 @@
-<!doctype html>
-<html lang="fr" ng-app>
-	<head>
-		<title>Quizz Municipales 2014 à Paris</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<!--[if lte IE 7]> <html class="no-js ie7 oldie" lang="fr" ng-app> <![endif]-->
+<!--[if IE 8]> <html class="no-js ie8 oldie" lang="fr" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" ng-app> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>Le Parisien Magazine - Les municipales - Quizz</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<link rel="stylesheet" href="/app/css/style.css" media="all" />
+	<link rel="shortcut icon" href="/app/favicon.ico" />
+	<script type="text/javascript" src="/app/vendor/modernizr/modernizr.js"></script>
+    <!--[if lte IE 8]>
+		<script type="text/javascript" src="/app/vendor/selectivizr/selectivizr.js"></script>
+	<![endif]-->
+	<!--[if gte IE 9]>
+	  <style type="text/css">
+	    .gradient {
+	       filter: none;
+	    }
+	  </style>
+	<![endif]-->
+</head>
+	<body>
 
-		<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
-	</head>
-	<body >
 		<div ng-view>
 			[home-tmpl]
 		</div>
 		<script data-main="/app/js/main" src="/app/vendor/requirejs/require.js"></script>
+
 	</body>
 </html>

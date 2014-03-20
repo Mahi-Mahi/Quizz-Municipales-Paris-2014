@@ -116,7 +116,7 @@ gulp.task('watch', function() {
 gulp.task('build', ['setup'], function() {
 
     // base_url
-    var base_url = 'quizz-municipales-paris-2014';
+    var base_url = 'quiz-municipales-paris-2014-app';
 
     gulp.src([base_url + '/'], {
         read: false

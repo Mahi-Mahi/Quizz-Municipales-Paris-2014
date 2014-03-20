@@ -13,20 +13,20 @@ define(['angular', 'services'], function(angular) {
 		.controller('resultsCtrl', ['$scope', '$rootScope', '$location',
 			function($scope, $rootScope, $location) {
 				if (!$rootScope.results) {
-					$location.path('/');
+					$location.path('/app/');
 				}
 				if ($rootScope.results.nkm > $rootScope.results.ah) {
 					// NKM
-					$scope.title = "Vous partagez plutôt les idées de Nathalie Kosciuko-Morizet";
+					$scope.result_title = "Vous partagez plutôt les idées <br />de <strong>Nathalie Kosciusko-Morizet</strong>";
 					$scope.slug = ['nkm'];
 				} else {
 					if ($rootScope.results.nkm < $rootScope.results.ah) {
 						// AH
-						$scope.title = "Vous partagez plutôt les idées de Nathalie Kosciuko-Morizet";
-						$scope.slug = ['nkm'];
+						$scope.result_title = "Vous partagez plutôt les idées <br />de <strong>Anne Hidalgo</strong>";
+						$scope.slug = ['ah'];
 					} else {
 						// draw
-						$scope.title = "Vous partagez à égalité les idées des deux candidates";
+						$scope.result_title = "Vous partagez à égalité les idées <br />des <strong>deux candidates</strong>";
 						$scope.slug = ['ah', 'nkm'];
 					}
 				}

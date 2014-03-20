@@ -1,7 +1,11 @@
+/* global require */
+/* global angular */
+
 require.config({
 	paths: {
 		angular: '/app/vendor/angular/angular',
 		angularRoute: '/app/vendor/angular-route/angular-route',
+		angularSanitize: '/app/vendor/angular-sanitize/angular-sanitize',
 		angularResource: '/app/vendor/angular-resource/angular-resource',
 		angularMocks: '/app/vendor/angular-mocks/angular-mocks',
 		text: '/app/vendor/requirejs-text/text'

@@ -1,13 +1,21 @@
-
-<div class="results {{slug.join(' ')}}">
-
-<h2>Résultats</h2>
-
-<img ng-repeat="key in slug" src="/app/img/{{key}}.png">
-
-<p>{{title}}</p>
-
-<a href="/app/quiz">Rejouer</a>
-<a href="/app/reponses">Voir les réponses</a>
-
-</div>
+<div class="wrapper gradient wrapper-result {{slug.join(' ')}}">
+	<div class="main" role="main">
+		<div class="main__result">
+			<div class="main__result__header">
+				<img ng-repeat="key in slug" src="/app/images/head-{{key}}.png" alt="{{name}}">
+			</div><!-- .main__result__header -->
+			<div class="main__result__body">
+				<p ng-bind-html="result_title"></p>
+			</div><!-- .main__result__body -->
+			<div class="main__result__footer">
+				<ul class="unstyled">
+					<li class="bt-item"><a href="/app/reponses">les réponses</a></li>
+					<li class="bt-item"><a href="/app/quiz">rejouer</a></li>
+				</ul>
+				<p>
+					<a href="http://www.leparisienmagazine.fr" target="_blank"><img src="/app/images/logo-le-parisien-magazine.png" alt="Le parisien magazine" /></a>
+				</p>
+			</div><!-- .main__result__footer -->
+		</div><!-- .main__result -->
+	</div><!-- .main -->
+</div><!-- .wrapper -->

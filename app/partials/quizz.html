@@ -1,20 +1,44 @@
-Quizz
+<div class="wrapper gradient wrapper-question {{mode}}">
+	<header class="header" role="banner">
+		<h1><strong>quiz</strong> | municipales 2014 à Paris</h1>
+	</header><!-- .header -->
+	<div class="main" role="main">
+		<div class="sidebar">
+			<div class="bt-left"></div><!-- .bt-left -->
+			<div class="sidebar__character">
+				<img src="/app/images/profile-ah.png" alt="" />
+				<p>	&nbsp;</p>
+			</div><!-- .sidebar__character -->
+		</div><!-- .left-sidebar -->
+		<div class="content">
+			<div class="content__header">
+				<h2>{{question.theme}}</h2>
+			</div><!-- .content__header -->
+			<p>
+				{{question.text}}
+			</p>
+			<ul class="unstyled">
+				<li ng-repeat="answer in question.answers" ng-click="setAnswer($index)" class="question-item {{answer.score.nkm == true ? 'nkm' : ''}} {{answer.score.ah == true ? 'ah' : ''}}">
+					<span class="bullet default-bullet"></span>
+					<span class="bullet hidalgo-bullet"></span>
+					<span class="bullet nkm-bullet"></span>
+					{{answer.text}}
+				</li>
 
-<div class="{{mode}}">
+			</ul>
+		</div><!-- .content -->
+		<div class="sidebar">
+			<div class="bt-right" ng-click="nextQuestion()"></div><!-- .bt-right -->
+			<div class="sidebar__character">
+				<img src="/app/images/profile-nkm.png" alt="" />
+				<p>
+					<a href="http://www.leparisienmagazine.fr" target="_blank"><img src="/app/images/logo-lpm-sidebar.png" alt="Le parisien magazine" /></a>
+				</p>
+			</div><!-- .sidebar__character -->
+		</div><!-- .right-sidebar -->
+	</div><!-- .main -->
 
-	<h3>{{question.theme}}</h3>
-	<h2>{{question.text}}</h2>
-
-	<a class="next" ng-click="nextQuestion()">Next</a>
-
-	<ul>
-		<li ng-repeat="answer in question.answers" ng-click="setAnswer($index)" class="{{answer.score.nkm == true ? 'nkm' : ''}} {{answer.score.ah == true ? 'ah' : ''}}">
-			<span class="grey"></span>
-			<span class="pink"></span>
-			<span class="blue"></span>
-			{{answer.text}}
-		</li>
-
-	</ul>
-
-</div>
+	<footer class="footer">
+		&nbsp;
+	</footer><!-- .footer -->
+</div><!-- .wrapper -->
