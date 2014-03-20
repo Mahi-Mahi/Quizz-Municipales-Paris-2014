@@ -1,0 +1,32 @@
+.pink {
+	background: pink;
+}
+.blue {
+	background: blue;
+}
+.grey {
+	background: grey;
+}
+.pink, .blue, .grey {
+	width: 20px;
+	height: 20px;
+	border: 1px solid grey;
+	display: inline-block;
+}
+.pink, .blue {
+	display: none;
+}
+.reponses {
+	.nkm .pink, .ah .blue {
+		display: inline-block;
+	}
+	.nkm .grey, .ah .grey {
+		display: none;
+	}
+}
+.next {
+	display: none;
+}
+.reponses .next {
+	display: block;
+}

@@ -1,0 +1,20 @@
+Quizz
+
+<div class="{{mode}}">
+
+	<h3>{{question.theme}}</h3>
+	<h2>{{question.text}}</h2>
+
+	<a class="next" ng-click="nextQuestion()">Next</a>
+
+	<ul>
+		<li ng-repeat="answer in question.answers" ng-click="setAnswer($index)" class="{{answer.score.nkm == true ? 'nkm' : ''}} {{answer.score.ah == true ? 'ah' : ''}}">
+			<span class="grey"></span>
+			<span class="pink"></span>
+			<span class="blue"></span>
+			{{answer.text}}
+		</li>
+
+	</ul>
+
+</div>

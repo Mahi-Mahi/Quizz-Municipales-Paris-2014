@@ -43,12 +43,12 @@ answers = nil
 		p "question ##{num} - #{question}"
 	end
 	unless ws[x, 4] == ''
-		question[:answers].push({text: ws[x, 4], score: {nkm: ws[x, 5]=='', ah: ws[x, 6]==''}})
+		question[:answers].push({text: ws[x, 4], score: {nkm: ws[x, 5]=='x', ah: ws[x, 6]=='x'}})
 	end
 end
 
 p data
 
-File.write('./data/data.json', data.to_json)
+File.write('./data/data.json', {questions: data}.to_json)
 
 

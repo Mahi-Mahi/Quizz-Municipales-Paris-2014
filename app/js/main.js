@@ -2,6 +2,7 @@ require.config({
 	paths: {
 		angular: '../../vendor/angular/angular',
 		angularRoute: '../../vendor/angular-route/angular-route',
+		angularResource: '../../vendor/angular-resource/angular-resource',
 		angularMocks: '../../vendor/angular-mocks/angular-mocks',
 		text: '../../vendor/requirejs-text/text'
 	},
@@ -10,6 +11,7 @@ require.config({
 			'exports': 'angular'
 		},
 		'angularRoute': ['angular'],
+		'angularResource': ['angular'],
 		'angularMocks': {
 			deps: ['angular'],
 			'exports': 'angular.mock'

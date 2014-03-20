@@ -13,18 +13,27 @@ var csso = require('gulp-csso');
 var sass = require('gulp-ruby-sass');
 
 var clean = require('gulp-clean');
+var replace = require('gulp-replace');
+var fs = require('fs');
 
 var rjs = require('gulp-requirejs');
 
 // Sass
 gulp.task('sass', function() {
-    return gulp.src(['app/styles/*.scss'])
+    return gulp.src(['app/scss/*.scss'])
         .pipe(sass({
             compass: true
         }))
         .pipe(autoprefix())
         .pipe(csso())
         .pipe(gulp.dest('app/css'));
+});
+
+// html
+gulp.task('html', function() {
+    gulp.src(['app/partials/index.html'])
+        .pipe(replace("[home-tmpl]", fs.readFileSync('app/partials/home.html', 'utf8')))
+        .pipe(gulp.dest('app/'));
 });
 
 // Bower
@@ -39,7 +48,7 @@ gulp.task('bower', function() {
 
 // Clean
 gulp.task('clean', function() {
-    gulp.src(['app/vendor', 'app/css', 'data/data.json'], {
+    gulp.src(['app/vendor', 'app/css', 'app/data/data.json'], {
         read: false
     })
         .pipe(clean());
@@ -47,32 +56,6 @@ gulp.task('clean', function() {
 });
 
 // data
-gulp.task('data-watch', function() {
-
-    gulp.watch('data/import.rb', function() {
-        var child = spawn("data/import.rb", [], {
-            cwd: process.cwd()
-        }),
-            stdout = '',
-            stderr = '';
-
-        child.stdout.setEncoding('utf8');
-        child.stdout.on('data', function(data) {
-            stdout += data;
-            gutil.log(data);
-        });
-        child.stderr.setEncoding('utf8');
-        child.stderr.on('data', function(data) {
-            stderr += data;
-            gutil.log(gutil.colors.red(data));
-            gutil.beep();
-        });
-        child.on('close', function(code) {
-            gutil.log("Done with exit code", code);
-        });
-    });
-
-});
 gulp.task('data', function() {
     gulp.src(['data/data.json'])
         .pipe(gulp.dest('app/data'));
@@ -99,7 +82,33 @@ gulp.task('setup', ['clean', 'bower', 'default']);
 
 // watch
 gulp.task('watch', function() {
-    gulp.watch('app/styles/*.scss', function() {
+    gulp.watch('data/import.rb', function() {
+        var child = spawn("data/import.rb", [], {
+            cwd: process.cwd()
+        }),
+            stdout = '',
+            stderr = '';
+
+        child.stdout.setEncoding('utf8');
+        child.stdout.on('data', function(data) {
+            stdout += data;
+            gutil.log(data);
+        });
+        child.stderr.setEncoding('utf8');
+        child.stderr.on('data', function(data) {
+            stderr += data;
+            gutil.log(gutil.colors.red(data));
+            gutil.beep();
+        });
+        child.on('close', function(code) {
+            gutil.log("Done with exit code", code);
+        });
+        gulp.run('data');
+    });
+    gulp.watch('app/scss/*.scss', function() {
         gulp.run('sass');
+    });
+    gulp.watch('app/partials/*.html', function() {
+        gulp.run('html');
     });
 });
