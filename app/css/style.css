@@ -385,6 +385,7 @@ img {
     -webkit-backface-visibility: hidden;
     -webkit-transform: translate3d(0, 0, 0);
     background: #fff;
+    border: 1px solid #fff;
     border-radius: 4px;
     color: #9981b3;
     display: inline-block;
@@ -399,7 +400,7 @@ img {
     .ah .bt-item a {
       color: #f03e8d; }
     .bt-item a:hover {
-      background: #000;
+      background: none;
       color: #fff !important; }
 
 .hidalgo-bullet, .nkm-bullet {

@@ -407,6 +407,7 @@ img { border: 0; vertical-align: middle; }
 	a {
 		@include transition(all .2s linear);
 		background:#fff;
+		border:1px solid #fff;
 		border-radius:4px;
 		color:#9981b3;
 		display: inline-block;
@@ -423,7 +424,7 @@ img { border: 0; vertical-align: middle; }
 			color:#f03e8d;
 		}
 		&:hover {
-			background:#000;
+			background:none;
 			color:#fff !important;
 		}
 	}
