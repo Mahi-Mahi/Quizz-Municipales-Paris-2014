@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lte IE 7]> <html class="no-js ie7 oldie" lang="fr" ng-app> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 oldie" lang="fr" ng-app> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" ng-app> <!--<![endif]-->
+<!--[if lte IE 7]> <html xmlns:ng="http://angularjs.org" class="no-js ie7 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if IE 8]> <html xmlns:ng="http://angularjs.org" class="no-js ie8 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns:ng="http://angularjs.org" class="no-js" lang="fr" id="ng-app" ng-app> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Le Parisien Magazine - Les municipales - Quizz</title>
@@ -10,6 +10,9 @@
 	<link rel="stylesheet" href="/app/css/style.css?CACHE_BUST" media="all" />
 	<link rel="shortcut icon" href="/app/favicon.ico" />
 	<script type="text/javascript" src="/app/vendor/modernizr/modernizr.js"></script>
+	<!--[if lte IE 7]>
+        <script src="/app/vendor/json3/lib/json3.min.js"></script>
+      <![endif]-->
     <!--[if lte IE 8]>
 		<script type="text/javascript" src="/app/vendor/selectivizr/selectivizr.js"></script>
 	<![endif]-->
@@ -24,7 +27,7 @@
 	<body>
 
 		<div ng-view>
-			
+
 <div class="wrapper gradient wrapper-home">
 	<div class="wrapper__header">
 		<a href="http://www.leparisienmagazine.fr" target="_blank"><img src="/app/images/logo-lpm-hp.png" alt="Le parisien magazine" /></a>
@@ -54,7 +57,6 @@
 		&nbsp;
 	</footer><!-- .footer -->
 </div><!-- .wrapper -->
-
 
 		</div>
 		<script data-main="/app/js/main" src="/app/vendor/requirejs/require.js"></script>
