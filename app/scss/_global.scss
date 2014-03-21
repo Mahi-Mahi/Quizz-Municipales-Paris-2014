@@ -47,6 +47,14 @@ img { border: 0; vertical-align: middle; }
   }
 }
 
+body > div {
+	display: none;
+}
+
+.ng-scope {
+	display: block;
+}
+
 .ng-scope .wrapper-home {
 	.wrapper__header, .content__tagline {
 		-webkit-animation-name: fadeIn;
