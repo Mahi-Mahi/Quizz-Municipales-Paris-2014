@@ -34,6 +34,8 @@ define([], function() {
 					$rootScope.results[key] += value ? 1 : 0;
 				});
 
+				ga('send', 'event', 'question', 'click', $scope.question_idx, index);
+
 				$scope.nextQuestion();
 			}
 
@@ -63,7 +65,7 @@ define([], function() {
 			startQuizz();
 		} else {
 			dataService.getData(function(data) {
-				$scope.questions = data.questions;
+				$scope.questions = data.questions.slice(0, 3);
 				startQuizz();
 			});
 		}
