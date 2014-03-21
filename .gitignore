@@ -12,4 +12,12 @@ app/css/style.css
 
 app/css/style.css
 
+<<<<<<< HEAD
 **-ck.js
+=======
+app/js/controllers/quizzCtrl-ck.js
+
+app/js/controllers/quizzCtrl-ck.js
+
+app/js/controllers-ck.js
+>>>>>>> FETCH_HEAD
