@@ -2,6 +2,7 @@
 /* global angular */
 
 require.config({
+	urlArgs: "bust=" + (new Date()).getTime(),
 	paths: {
 		angular: '/app/vendor/angular/angular',
 		angularRoute: '/app/vendor/angular-route/angular-route',
@@ -15,6 +16,7 @@ require.config({
 			'exports': 'angular'
 		},
 		'angularRoute': ['angular'],
+		'angularSanitize': ['angular'],
 		'angularResource': ['angular'],
 		'angularMocks': {
 			deps: ['angular'],

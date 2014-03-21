@@ -15,12 +15,12 @@ define(['angular', 'services'], function(angular) {
 				if (!$rootScope.results) {
 					$location.path('/app/');
 				}
-				if ($rootScope.results.nkm > $rootScope.results.ah) {
+				if ($rootScope.results && $rootScope.results.nkm > $rootScope.results.ah) {
 					// NKM
 					$scope.result_title = "Vous partagez plutôt les idées <br />de <strong>Nathalie Kosciusko-Morizet</strong>";
 					$scope.slug = ['nkm'];
 				} else {
-					if ($rootScope.results.nkm < $rootScope.results.ah) {
+					if ($rootScope.results && $rootScope.results.nkm < $rootScope.results.ah) {
 						// AH
 						$scope.result_title = "Vous partagez plutôt les idées <br />de <strong>Anne Hidalgo</strong>";
 						$scope.slug = ['ah'];

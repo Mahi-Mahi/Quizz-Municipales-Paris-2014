@@ -61,19 +61,6 @@ gulp.task('data', function() {
         .pipe(gulp.dest('app/data'));
 });
 
-// requirejs
-gulp.task('requirejsBuild', function() {
-    rjs({
-        baseUrl: 'app/js/app.js',
-        out: 'app/dist.js',
-        shim: {
-            // standard require.js shim options
-        },
-        // ... more require.js options
-    })
-        .pipe(gulp.dest('./deploy/')); // pipe it to the output DIR
-});
-
 // default
 gulp.task('default', ['sass', 'data']);
 
@@ -118,11 +105,15 @@ gulp.task('build', ['setup'], function() {
     // base_url
     var base_url = 'quiz-municipales-paris-2014-app';
 
+    /*
     gulp.src([base_url + '/'], {
         read: false
     })
         .pipe(clean());
+*/
     gulp.src(['app/**'])
+        .pipe(gulp.dest(base_url + '/'));
+    gulp.src(['app/**/*.html', 'app/**/*.js', 'app/**/*.css', 'app/.htaccess'])
         .pipe(replace("/app/", '/' + base_url + '/'))
         .pipe(gulp.dest(base_url + '/'));
 
