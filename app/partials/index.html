@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<!--[if lte IE 7]> <html class="no-js ie7 oldie" lang="fr" ng-app> <![endif]-->
-<!--[if IE 8]> <html class="no-js ie8 oldie" lang="fr" ng-app> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="fr" ng-app> <!--<![endif]-->
+<!--[if lte IE 7]> <html xmlns:ng="http://angularjs.org" class="no-js ie7 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if IE 8]> <html xmlns:ng="http://angularjs.org" class="no-js ie8 oldie" lang="fr" id="ng-app" ng-app> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns:ng="http://angularjs.org" class="no-js" lang="fr" id="ng-app" ng-app> <!--<![endif]-->
 <head>
 	<meta charset="UTF-8">
 	<title>Le Parisien Magazine - Test municipales - Pour qui allez-vous voter ?</title>
     <meta name="viewport" content="width=800" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<link rel="stylesheet" href="/app/css/style.css" media="all" />
+	<link rel="stylesheet" href="/app/css/style.css?CACHE_BUST" media="all" />
 	<link rel="shortcut icon" href="/app/favicon.ico" />
 	<script type="text/javascript" src="/app/vendor/modernizr/modernizr.js"></script>
+	<!--[if lte IE 7]>
+        <script src="/app/vendor/json3/lib/json3.min.js"></script>
+      <![endif]-->
     <!--[if lte IE 8]>
 		<script type="text/javascript" src="/app/vendor/selectivizr/selectivizr.js"></script>
 	<![endif]-->
