@@ -35,6 +35,7 @@ answers = nil
 	end
 	unless ws[x, 2] == ''
 		# new question
+		p question
 		unless question.nil?
 			data.push question
 		end
@@ -45,6 +46,10 @@ answers = nil
 	unless ws[x, 4] == ''
 		question[:answers].push({text: ws[x, 4], score: {nkm: ws[x, 5]=='x', ah: ws[x, 6]=='x'}})
 	end
+end
+
+unless question.nil?
+	data.push question
 end
 
 p data

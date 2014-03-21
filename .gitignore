@@ -3,26 +3,10 @@ components
 bower_components
 app/vendor
 *.scssc
+**-ck.js
+app/css/style.css
 
 quiz-municipales-paris-2014-app/
+test-municipales-paris-2014-app/
 
-app/css/style.css
 
-app/css/style.css
-
-app/css/style.css
-
-<<<<<<< HEAD
-**-ck.js
-=======
-app/js/controllers/quizzCtrl-ck.js
-
-app/js/controllers/quizzCtrl-ck.js
-
-app/js/controllers-ck.js
-<<<<<<< HEAD
-
-app/js/main-ck.js
-=======
->>>>>>> FETCH_HEAD
->>>>>>> FETCH_HEAD
