@@ -79,96 +79,6 @@ img {
 .clearfix:after {
   clear: both; }
 
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-.ng-scope .wrapper-home .wrapper__header, .ng-scope .wrapper-home .content__tagline {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-.ng-scope .wrapper-home .bt-item {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-.ng-scope .wrapper-home .sidebar {
-  -webkit-animation-name: fadeInDownBig;
-  animation-name: fadeInDownBig;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-.ng-scope .wrapper-question .content {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-.ng-scope .wrapper-question .question-item {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-.ng-scope .wrapper-question .sidebar {
-  -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-.ng-scope .main__result {
-  -webkit-animation-name: fadeInDownBig;
-  animation-name: fadeInDownBig;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both; }
-
-@-webkit-keyframes fadeInDownBig {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-1000px);
-    transform: translateY(-1000px); }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    transform: translateY(0); } }
-
-@keyframes fadeInDownBig {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(-1000px);
-    -ms-transform: translateY(-1000px);
-    transform: translateY(-1000px); }
-
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -ms-transform: translateY(0);
-    transform: translateY(0); } }
-
 .wrapper {
   display: block;
   height: 600px;
@@ -218,20 +128,6 @@ img {
   .wrapper-question .main {
     background: #fff;
     height: 545px; }
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0; }
-
-  100% {
-    opacity: 1; } }
 
 .sidebar {
   display: table-cell;
@@ -290,7 +186,6 @@ img {
   padding: 0 0 20px 0; }
 
 .question-item {
-  cursor: pointer;
   display: block;
   line-height: 1.1;
   margin: 0;
@@ -300,7 +195,7 @@ img {
   border-radius: 100%;
   display: inline-block;
   height: 12px;
-  margin: 3px 1px 0 0;
+  margin: 0 1px 0 0;
   vertical-align: top;
   width: 12px; }
 
