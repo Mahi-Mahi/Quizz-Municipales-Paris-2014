@@ -7,6 +7,7 @@ define([
 	'angularRoute',
 	'angularResource',
 	'angularSanitize',
+	// 'angularAnimate',
 ], function(angular, filters, services, directives, controllers) {
 	'use strict';
 
@@ -16,6 +17,7 @@ define([
 		'ngRoute',
 		'ngResource',
 		'ngSanitize',
+		// 'ngAnimate',
 		'myApp.controllers',
 		'myApp.filters',
 		'myApp.services',
