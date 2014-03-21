@@ -1,0 +1,1 @@
+define(["angular","filters","services","directives","controllers","angularRoute","angularResource","angularSanitize"],function(e,t,n,r,i){"use strict";return e.module("myApp",["ngRoute","ngResource","ngSanitize","myApp.controllers","myApp.filters","myApp.services","myApp.directives","dataService"])});
