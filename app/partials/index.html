@@ -7,6 +7,15 @@
 	<title>Le Parisien Magazine - Test municipales - Pour qui allez-vous voter ?</title>
     <meta name="viewport" content="width=800" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Le Parisien Magazine - 21 mars 2014" />
+	<meta property="og:url" content="SHARE_URL" />
+	<meta property="og:site_name" content="Le Parisien Magazine" />
+	<meta property="article:publisher" content="https://www.facebook.com/pages/Le-Parisien-Magazine/423413051050289" />
+	<meta property="og:image" content="http://leparisienmagazine.fr/wp-content/uploads/2014/03/10150783_671905476201044_811987263_n.png" />
+
 	<link rel="stylesheet" href="/app/css/style.css?CACHE_BUST" media="all" />
 	<link rel="shortcut icon" href="/app/favicon.ico" />
 	<script type="text/javascript" src="/app/vendor/modernizr/modernizr.js"></script>
@@ -25,6 +34,15 @@
 	<![endif]-->
 </head>
 	<body>
+
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=170137329861440";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
 
 		<div ng-view>
 			[home-tmpl]

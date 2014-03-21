@@ -29,6 +29,11 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('app/css'));
 });
 
+var base_url = 'test-municipales-paris-2014-app';
+var share_url = 'http://www.leparisienmagazine.fr/test-municipales-nkm-ou-anne-hidalgo-pour-qui-allez-vous-voter-111176/';
+var share_text = "Municipales à Paris : voterez-vous NKM ou Anne Hidalgo ? En 20 questions, découvrez quel programme vous convient le mieux grâce au test du Parisien Magazine !" + share_url;
+var share_status = "#MunicipalesParis : #NKM ou Anne #Hidalgo ? Découvrez quel programme vous convient le mieux ! via @leparisienmag " + share_url;
+
 // html
 gulp.task('html', function() {
     gulp.src(['app/partials/index.html'])
@@ -102,9 +107,6 @@ gulp.task('watch', function() {
 
 gulp.task('build', ['setup'], function() {
 
-    // base_url
-    var base_url = 'test-municipales-paris-2014-app';
-
     /*
     gulp.src([base_url + '/'], {
         read: false
@@ -114,7 +116,12 @@ gulp.task('build', ['setup'], function() {
     gulp.src(['app/**'])
         .pipe(gulp.dest(base_url + '/'));
     gulp.src(['app/**/*.html', 'app/**/*.js', 'app/**/*.css', 'app/.htaccess'])
-        .pipe(replace("/app/", '/' + base_url + '/'))
+
+    .pipe(replace("SHARE_URL", encodeURIComponent(share_url)))
+        .pipe(replace("SHARE_TEXT", encodeURIComponent(share_text)))
+        .pipe(replace("SHARE_STATUS", encodeURIComponent(share_status)))
+
+    .pipe(replace("/app/", '/' + base_url + '/'))
         .pipe(replace("CACHE_BUST", (new Date()).getTime()))
         .pipe(gulp.dest(base_url + '/'));
 

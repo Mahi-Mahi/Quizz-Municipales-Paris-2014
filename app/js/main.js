@@ -10,7 +10,8 @@ require.config({
 		angularResource: '/app/vendor/angular-resource/angular-resource',
 		// angularAnimate: '/app/vendor/angular-animate/angular-animate',
 		angularMocks: '/app/vendor/angular-mocks/angular-mocks',
-		text: '/app/vendor/requirejs-text/text'
+		text: '/app/vendor/requirejs-text/text',
+		rrssb: '/app/vendor/RRSSB/js/rrssb'
 	},
 	shim: {
 		'angular': {

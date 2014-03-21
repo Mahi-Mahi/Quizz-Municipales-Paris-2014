@@ -25,3 +25,25 @@
 	float: right;
 	margin-top: 10px;
 }
+
+.share-container {
+	float: right;
+		padding-top: 5px;
+	.rrssb-buttons {
+		height: 30px;
+		li a {
+			padding-top: 8px;
+			.icon	{
+				padding-top: 6px;
+			}
+			.text {
+				margin-left: 5px;
+			}
+		}
+	}
+}
+// .wrapper-result {
+	.share-container {
+		padding-right: 3px;
+	}
+// }
