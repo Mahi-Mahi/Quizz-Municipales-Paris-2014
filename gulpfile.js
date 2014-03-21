@@ -115,6 +115,7 @@ gulp.task('build', ['setup'], function() {
         .pipe(gulp.dest(base_url + '/'));
     gulp.src(['app/**/*.html', 'app/**/*.js', 'app/**/*.css', 'app/.htaccess'])
         .pipe(replace("/app/", '/' + base_url + '/'))
+        .pipe(replace("CACHEBUST", (new Date()).getTime()))
         .pipe(gulp.dest(base_url + '/'));
 
 });
