@@ -281,7 +281,6 @@ body > div {
 }
 
 // QUESTION
-
 .content__header {
 	height:125px;
 }
@@ -313,6 +312,10 @@ body > div {
 	line-height:1.1;
 	margin: 0;
 	padding:0 0 15px 0;
+	&:hover {
+		// font-weight: bold;
+		color: #444;
+	}
 }
 
 .bullet {
